@@ -27,13 +27,13 @@ namespace OAParagraph
             //if we have already in dictionary, increase counter, if not add it with 1 count
             foreach (Match m in matches)
             {
-                if (Results.ContainsKey(m.Value))
+                if (Results.ContainsKey(m.Value.ToLower()))
                 {
-                    Results[m.Value]++;
+                    Results[m.Value.ToLower()]++;
                 }
                 else
                 {
-                    Results.Add(m.Value, 1);
+                    Results.Add(m.Value.ToLower(), 1);
                 }
             }
 
